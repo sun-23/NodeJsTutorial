@@ -79,7 +79,7 @@ passport.deserializeUser(function(id, done) {
     done(err, user);
   });
 });
-
+                           //same username input in login.ejs
 passport.use(new LocalStrategy(function(username, password, done) {
   User.getUserByName(username, function(err, user) {
     if (err) throw error;
