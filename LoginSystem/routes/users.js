@@ -79,12 +79,12 @@ passport.deserializeUser(function(id, done) {
     done(err, user);
   });
 });
-                           //same username input in login.ejs
+                           //same username, password input in login.ejs
 passport.use(new LocalStrategy(function(username, password, done) {
   User.getUserByName(username, function(err, user) {
     if (err) throw error;
     if (!user) {
-        return done(null, false);
+      return done(null, false);
     }else{
       User.comparePassword(password, user.password, function(err, isMatch) {
         if (err) return err;

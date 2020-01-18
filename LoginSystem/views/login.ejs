@@ -14,7 +14,7 @@
       <%- include layout %>
       <h2>Login Form</h2>
       <%- messages() %>
-                                    <!--name js file to use:users.js and route:login method:post -->
+                                    <!-- PATH in app.js is /users and route of path is /login in users.js -->
       <form class="form-group" action="/users/login" method="post">
                 <div class="form-group">
                       <label for="">Username:</label>
@@ -24,7 +24,7 @@
                       <label for="">Password:</label>
                       <input type="password" name="password" value="" class="form-control">
                 </div>
-                <input type="submit" name="" value="Register" class="btn btn-success">
+                <input type="submit" name="" value="Login" class="btn btn-success">
         </form>
 
     </div>
